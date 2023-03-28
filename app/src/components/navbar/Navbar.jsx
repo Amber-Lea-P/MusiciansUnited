@@ -52,7 +52,7 @@ const Navbar = () => {
                                 currentUser?.isSeller && (
                                     <>
                                     <Link className="link" to="/mygigs">Gigs</Link>
-                                    <Link className="link" to="/add">Add New Gigs</Link>
+                                   
                                     </>
                                 )}
                                 <Link className="link" to="orders">Orders</Link>
