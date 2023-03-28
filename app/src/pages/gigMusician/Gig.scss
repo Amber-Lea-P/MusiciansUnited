@@ -76,7 +76,7 @@
           color: #555;
         }
   
-        .seller {
+        .musician {
           margin-top: 50px;
           display: flex;
           flex-direction: column;
@@ -121,6 +121,7 @@
                 border-radius: 5px;
                 border: 1px solid gray;
                 padding: 10px;
+                cursor: pointer;
               }
             }
           }

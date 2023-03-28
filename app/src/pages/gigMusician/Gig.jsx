@@ -55,8 +55,8 @@ const Gig = () => {
             found nowhere else. If you have any questions you're more than
             welcome to send me a message.
           </p>
-          <div className="seller">
-            <h2>About The Seller</h2>
+          <div className="musician">
+            <h2>About The Musician</h2>
             <div className="user">
               <img
                 src="https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&w=1600"
