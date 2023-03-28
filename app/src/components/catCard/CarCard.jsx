@@ -2,7 +2,7 @@ import React from 'react'
 import "./CatCard.scss";
 import { Link } from "react-router-dom";
 
-const CarCard = ({item}) => {
+const CarCard = ({card}) => {
   return (
     <Link to="/gigs?cat=design">
     <div className="catCard">
