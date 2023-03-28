@@ -9,8 +9,8 @@ const Featured = () => {
                 <h1>Find the perfect musician here!</h1>
                 <div className="search">
                     <div className="searchInput">
-                        <img src="" alt="" />
-                        <input type="text" placeholder="Listen to our musicians play live" />
+                        <img src="./img/search.png" alt="" />
+                        <input type="text" placeholder="Listen here" />
                     </div>
                     <button>Search</button>
                 </div>
@@ -22,7 +22,9 @@ const Featured = () => {
                     <button>Digital</button>
                 </div>
             </div>
-            <div className="right"></div>
+            <div className="right">
+                <img src="./img/man.png" alt="" />
+            </div>
         </div>
     </div>
   )
