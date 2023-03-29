@@ -28,7 +28,7 @@ const Home = () => {
               Quality ratings
             </div>
             <p>
-              Are you curious about a musician? Check their profile out and view their star rating. Also see that services they have available. 
+              Are you curious about a musician? Check their profile out and view their star rating. Also view what services they have available. 
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
