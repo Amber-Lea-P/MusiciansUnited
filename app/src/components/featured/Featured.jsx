@@ -10,7 +10,7 @@ const Featured = () => {
                 <div className="search">
                     <div className="searchInput">
                         <img src="./img/search.png" alt="" />
-                        <input type="text" placeholder="Search for musicians here" />
+                        <input type="text" placeholder="Search musicians" />
                     </div>
                     <button>Search</button>
                 </div>
@@ -19,7 +19,7 @@ const Featured = () => {
                     <button>Strings</button>
                     <button>Brass</button>
                     <button>Vocals</button>
-                    <button>Digital</button>
+                    <button>Keyboards</button>
                 </div>
             </div>
             <div className="right">

@@ -23,7 +23,7 @@ const Navbar = () => {
 
     const currentUser ={
         id:1,
-        username:"John Doe",
+        username:"Musician",
         isSeller:true
     }
 
@@ -69,11 +69,11 @@ const Navbar = () => {
                     <div className="menu">
                         <Link className="link menuLink" to="/">Brass</Link>
                         <Link className="link" to="/">Strings</Link>
-                        <Link className="link" to="/">Guitars</Link>
+                        <Link className="link" to="/">Woodwind</Link>
                         <Link className="link" to="/">Percussions</Link>
-                        <Link className="link" to="/">Jazz</Link>
-                        <Link className="link" to="/">Rock</Link>
-                        <Link className="link" to="/">Digital</Link>
+                        <Link className="link" to="/">Keyboards</Link>
+                        <Link className="link" to="/">Vocals</Link>
+                        <Link className="link" to="/">Digital Music & Others</Link>
                     </div>
                 </>
             }
