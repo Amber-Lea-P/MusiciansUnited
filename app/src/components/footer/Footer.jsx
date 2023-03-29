@@ -13,7 +13,7 @@ const Footer = () => {
           <span>Woodwind</span>
           <span>Keyboards</span>
           <span>Percussions</span>
-          <span>Vocaals</span>
+          <span>Vocals</span>
           <span>Digitial Music & Other</span>
           <span>Group Artist</span>
           <span>Sitemap</span>

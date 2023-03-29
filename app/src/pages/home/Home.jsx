@@ -15,38 +15,34 @@ const Home = () => {
       <div className="features">
         <div className="container">
           <div className="item">
-            <h1>A whole world of freelance talent at your fingertips</h1>
+            <h1>A whole world of musical talent at your fingertips</h1>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              The best for every budget
+              Location is no longer a problem
             </div>
             <p>
-              Find high-quality services at every price point. No hourly rates,
-              just project-based pricing.
+              Find talented musicians from all over the world!
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Quality work done quickly
+              Quality ratings
             </div>
             <p>
-              Find the right freelancer to begin working on your project within
-              minutes.
+              Are you curious about a musician? Check their profile out and view their star rating. 
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Protected payments, every time
+              Easy communication, at your fingertips. 
             </div>
             <p>
-              Always know what you'll pay upfront. Your payment isn't released
-              until you approve the work.
+              Utilize the private chat area to talk to other MU members.
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
               24/7 support
             </div>
             <p>
-              Find high-quality services at every price point. No hourly rates,
-              just project-based pricing.
+              At MU we strive to provide our musicians with the best way to connect with other musicians.
             </p>
           </div>
           <div className="item">
