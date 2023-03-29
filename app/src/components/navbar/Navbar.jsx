@@ -73,7 +73,7 @@ const Navbar = () => {
                         <Link className="link" to="/">Percussions</Link>
                         <Link className="link" to="/">Keyboards</Link>
                         <Link className="link" to="/">Vocals</Link>
-                        <Link className="link" to="/">Digital Music & Others</Link>
+                        <Link className="link" to="/">Digital Music & Other</Link>
                     </div>
                 </>
             }
