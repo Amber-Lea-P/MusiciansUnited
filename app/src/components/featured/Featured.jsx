@@ -6,11 +6,11 @@ const Featured = () => {
     <div className="featured">
         <div className="container">
             <div className="left">
-                <h1>Find the perfect musician here!</h1>
+                <h1>Connect with other musicians!</h1>
                 <div className="search">
                     <div className="searchInput">
                         <img src="./img/search.png" alt="" />
-                        <input type="text" placeholder="Listen here" />
+                        <input type="text" placeholder="Search for musicians here" />
                     </div>
                     <button>Search</button>
                 </div>
