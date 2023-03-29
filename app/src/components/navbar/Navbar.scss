@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #013914;
+    background-color: #790252;
     color: white;
     transition: 0.5s all ease;
     position: sticky;
@@ -26,7 +26,7 @@
 
             }
             .dot{
-                color: #1dbf73
+                color: #E80F88;
             }
         }
         .links{
@@ -75,8 +75,8 @@
                 background-color: transparent;
 
                 &:hover{
-                    background-color: #1dbf73;
-                    border-color: #1dbf73
+                    background-color: #E80F88;
+                    border-color: #E80F88
                 }
 
             }
