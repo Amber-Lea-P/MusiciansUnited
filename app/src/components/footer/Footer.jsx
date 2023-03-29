@@ -32,7 +32,7 @@ const Footer = () => {
           <h2>Support</h2>
           <span>Help & Support</span>
           <span>Trust & Safety</span>
-          <span>Connecting on MusicUnited</span>
+          <span>Connecting on MusiciansUnited</span>
         </div>
         <div className="item">
           <h2>Community</h2>
@@ -50,19 +50,19 @@ const Footer = () => {
         </div>
         <div className="item">
           <h2>More From MusicUnited</h2>
-          <span>MusicUnited Business</span>
-          <span>MusicUnited Pro</span>
-          <span>MusicUnited Guides</span>
+          <span>MusiciansUnited Business</span>
+          <span>MusiciansUnited Pro</span>
+          <span>MusiciansUnited Guides</span>
           <span>Get Inspired</span>
-          <span>MusicUnited Workspace</span>
+          <span>MusiciansUnited Workspace</span>
           <span>Learn</span>
         </div>
       </div>
       <hr />
       <div className="bottom">
         <div className="left">
-          <h2>MusicUnited</h2>
-          <span>© MusicUnited International Ltd. 2023</span>
+          <h2>MusiciansUnited</h2>
+          <span>© MusiciansUnited International Ltd. 2023</span>
         </div>
       
         <div className="right">
