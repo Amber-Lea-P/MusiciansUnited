@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h2>Categories</h2>
-          <span>Strings</span>
           <span>Brass</span>
+          <span>Strings</span>
           <span>Woodwind</span>
           <span>Keyboards</span>
           <span>Percussions</span>
@@ -49,7 +49,7 @@ const Footer = () => {
           <span>Community Standards</span>
         </div>
         <div className="item">
-          <h2>More From MusicUnited</h2>
+          <h2>More From MusiciansUnited</h2>
           <span>MusiciansUnited Business</span>
           <span>MusiciansUnited Pro</span>
           <span>MusiciansUnited Guides</span>
