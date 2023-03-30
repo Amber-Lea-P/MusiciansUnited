@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MusicianCard = ( {item} ) => {
   return (
-    <Link to="/gig/123" className="link">
+    <Link to="/gig/:id" className="link">
     <div className="musicianCard">
       <img src={item.img} alt="" />
       <div className="info">
