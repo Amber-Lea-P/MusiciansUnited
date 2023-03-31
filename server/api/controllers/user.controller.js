@@ -1,4 +1,3 @@
- export const deleteUser= (req, res) =>{
-    //TODO
-    res.send("Hi Amber!")
+ export const fn= (req, res) =>{
+   
 }
