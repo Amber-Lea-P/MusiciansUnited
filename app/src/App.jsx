@@ -12,11 +12,7 @@ import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import "./app.scss";
 import Login from './pages/login/Login';
 import Register from "./pages/register/Register";
-import {
-  QueryClient,
-  QueryClientProvider,
-  
-} from '@tanstack/react-query'
+import {QueryClient, QueryClientProvider,} from '@tanstack/react-query'
 
 
 

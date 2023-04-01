@@ -11,15 +11,14 @@ function Gigs() {
   const minRef = useRef();
   const maxRef = useRef();
 
-  const { search } = useLocation();
+ const {search} = useLocation();
 
-  const { isLoading, error, data, refetch } = useQuery({
-    queryKey: ["gigs"],
+
+  const { isLoading, error, data } = useQuery({
+    queryKey: ["repoData"],
     queryFn: () =>
       newRequest
-        .get(
-         "/gigs"
-        )
+        .get(`/gigs${search}`)
         .then((res) => {
           return res.data;
         }),
@@ -32,12 +31,13 @@ function Gigs() {
     setOpen(false);
   };
 
-  useEffect(() => {
+ /* useEffect(() => {
     refetch();
-  }, [sort]);
+  }, [sort]);*/
 
   const apply = () => {
-    refetch();
+    console.log(minRef.current.value);
+    console.log(maxRef.current.value);
   };
 
   return (
