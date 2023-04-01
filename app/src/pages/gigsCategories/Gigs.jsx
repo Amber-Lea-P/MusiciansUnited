@@ -2,12 +2,20 @@ import React, {useState, useRef} from 'react'
 import "./Gigs.scss"
 import { gigs } from "../../data";
 import MusicianCard from "../../components/musicianCard/MusicianCard"
+import { useQuery } from '@tanstack/react-query';
 
-const Gigs = () => {
+function Gigs() {
   const [sort, setSort] = useState("sales");
   const [open, setOpen] = useState(false);
   const minRef = useRef();
   const maxRef = useRef();
+
+  const { isPending, error, data } = useQuery({
+    queryKey: ['repoData'],
+    queryFn: () =>
+      newRequest("/gigs")
+  })
+console.log(data)
 
   const reSort = (type) => {
     setSort(type);
