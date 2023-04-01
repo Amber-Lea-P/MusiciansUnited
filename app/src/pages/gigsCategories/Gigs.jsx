@@ -18,7 +18,7 @@ function Gigs() {
     queryKey: ["repoData"],
     queryFn: () =>
       newRequest
-        .get(`/gigs${search}&sort=${sort}`)
+        .get(`/gigs?${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`)
         .then((res) => {
           return res.data;
         }),
