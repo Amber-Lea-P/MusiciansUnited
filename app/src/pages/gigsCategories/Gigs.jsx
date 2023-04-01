@@ -1,8 +1,9 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import "./Gigs.scss"
 import MusicianCard from "../../components/musicianCard/MusicianCard"
 import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
+import { useLocation} from "react-router-dom";
 
 function Gigs() {
   const [sort, setSort] = useState("sales");
@@ -10,31 +11,42 @@ function Gigs() {
   const minRef = useRef();
   const maxRef = useRef();
 
-  const { isLoading, error, data } = useQuery({
-    queryKey: ['repoData'],
+  const { search } = useLocation();
+
+  const { isLoading, error, data, refetch } = useQuery({
+    queryKey: ["gigs"],
     queryFn: () =>
-      newRequest.get("/gigs").then((res) =>{
-        return res.data;
-      })
-  })
-console.log(data)
+      newRequest
+        .get(
+         "/gigs"
+        )
+        .then((res) => {
+          return res.data;
+        }),
+  });
+
+  console.log(data);
 
   const reSort = (type) => {
     setSort(type);
     setOpen(false);
   };
-  const apply = ()=>{
-    console.log(minRef.current.value)
-    console.log(maxRef.current.value)
-  }
+
+  useEffect(() => {
+    refetch();
+  }, [sort]);
+
+  const apply = () => {
+    refetch();
+  };
 
   return (
     <div className="gigs">
       <div className="container">
-        <span className="breadcrumbs">MUSICIANS UNITED</span>
-        <h1>AI Artists</h1>
+        <span className="breadcrumbs">Musicians United </span>
+        <h1>String Artists</h1>
         <p>
-          Explore the boundaries of art and technology with Liverr's AI artists
+          Explore the beauty of strings with our String artists
         </p>
         <div className="menu">
           <div className="left">
@@ -55,21 +67,18 @@ console.log(data)
                   <span onClick={() => reSort("createdAt")}>Newest</span>
                 ) : (
                   <span onClick={() => reSort("sales")}>Best Selling</span>
-                  )}
-                  <span onClick={() => reSort("sales")}>Popular</span>
+                )}
+                <span onClick={() => reSort("sales")}>Popular</span>
               </div>
             )}
           </div>
         </div>
         <div className="cards">
-          {
-          isLoading
+          {isLoading
             ? "loading"
             : error
-            ? "Something went wrong"
-            : data.map((gig) => (
-            <MusicianCard key={gig.id} item={gig} />
-          ))}
+            ? "Something went wrong!"
+            : data.map((gig) => <MusicianCard key={gig._id} item={gig} />)}
         </div>
       </div>
     </div>

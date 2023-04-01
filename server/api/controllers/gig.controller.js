@@ -17,6 +17,7 @@ export const createGig = async (req, res, next) => {
     next(err);
   }
 };
+
 export const deleteGig = async (req, res, next) => {
     try {
     const gig = await Gig.findById(req.params.id);
@@ -51,8 +52,9 @@ export const getGigs = async (req, res, next) => {
     }),
     ...(q.search && { title: { $regex: q.search, $options: "i" } }),
   };
+  
   try {
-    const gigs = await Gig.find(filters).sort({ [q.sort]: -1 });
+    const gigs = await Gig.find(filters)
     res.status(200).send(gigs);
   } catch (err) {
     next(err);

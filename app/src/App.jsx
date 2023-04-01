@@ -15,7 +15,7 @@ import Register from "./pages/register/Register";
 import {
   QueryClient,
   QueryClientProvider,
-  useQuery,
+  
 } from '@tanstack/react-query'
 
 
@@ -76,6 +76,7 @@ function App() {
           path: "/login",
           element: <Login />,
         },
+      
       ]
     },
   ]);
