@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react'
 import "./Gigs.scss"
-import { gigs } from "../../data";
 import MusicianCard from "../../components/musicianCard/MusicianCard"
 import { useQuery } from '@tanstack/react-query';
+import newRequest from '../../utils/newRequest';
 
 function Gigs() {
   const [sort, setSort] = useState("sales");
@@ -10,10 +10,12 @@ function Gigs() {
   const minRef = useRef();
   const maxRef = useRef();
 
-  const { isPending, error, data } = useQuery({
+  const { isLoading, error, data } = useQuery({
     queryKey: ['repoData'],
     queryFn: () =>
-      newRequest("/gigs")
+      newRequest.get("/gigs").then((res) =>{
+        return res.data;
+      })
   })
 console.log(data)
 
@@ -60,7 +62,12 @@ console.log(data)
           </div>
         </div>
         <div className="cards">
-          {gigs.map((gig) => (
+          {
+          isLoading
+            ? "loading"
+            : error
+            ? "Something went wrong"
+            : data.map((gig) => (
             <MusicianCard key={gig.id} item={gig} />
           ))}
         </div>
