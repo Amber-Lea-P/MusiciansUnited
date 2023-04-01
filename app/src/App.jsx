@@ -11,7 +11,7 @@ import MyGigs from "./pages/myGigs/MyGigs";
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import "./app.scss";
 import Login from './pages/login/Login';
-import Register from './pages/register/Register';
+import Register from "./pages/register/Register";
 
 function App() {
 
