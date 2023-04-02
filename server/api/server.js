@@ -11,7 +11,9 @@ import reviewRoute from "./routes/review.route.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 8800;
 dotenv.config();
 mongoose.set('strictQuery', true);
 
@@ -42,7 +44,7 @@ app.use((err, req, res, next)=>{
   return res.status(errorStatus).send(errorMessage);
 })
 
-app.listen(8800, ()=>{
+app.listen(PORT, ()=>{
     connect()
-    console.log("Backend server is running!");
-})
+    console.log(`server started on port ${PORT}`);
+});
