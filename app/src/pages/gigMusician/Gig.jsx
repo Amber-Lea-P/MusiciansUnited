@@ -44,7 +44,7 @@ return (
       <div className="container">
         <div className="left">
           <span className="breadcrumbs">
-            Fiverr {">"} Graphics & Design {">"}
+            Musicians United
           </span>
           <h1>{data.title}</h1>
           {isLoadingUser ? (
