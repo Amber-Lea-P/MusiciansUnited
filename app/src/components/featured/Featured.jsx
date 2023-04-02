@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useState } from "react";
 import "./Featured.scss";
+import { useNavigate } from "react-router-dom";
 
-const Featured = () => {
+function Featured() {
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate(`/gigs?search=${input}`);
+  };
   return (
     <div className="featured">
-        <div className="container">
-            <div className="left">
-                <h1>Connect with other musicians!</h1>
-                <div className="search">
-                    <div className="searchInput">
-                        <img src="./img/search.png" alt="" />
-                        <input type="text" placeholder="Search musicians" />
-                    </div>
-                    <button>Search</button>
-                </div>
-                <div className="popular">
+      <div className="container">
+        <div className="left">
+          <h1>
+            Connect with other musicians!
+          </h1>
+          <div className="search">
+            <div className="searchInput">
+              <img src="./img/search.png" alt="" />
+              <input
+                type="text"
+                placeholder='Try "Keyboard"'
+                onChange={(e) => setInput(e.target.value)}
+              />
+            </div>
+            <button onClick={handleSubmit}>Search</button>
+          </div>
+          <div className="popular">
                     <span>Popular:</span>
                     <button>Strings</button>
                     <button>Brass</button>
@@ -24,10 +37,11 @@ const Featured = () => {
             </div>
             <div className="right">
                 <img src="./img/woman.png" alt="" />
-            </div>
+
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Featured
+export default Featured;
