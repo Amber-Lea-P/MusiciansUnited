@@ -15,6 +15,7 @@ import Register from "./pages/register/Register";
 import {QueryClient, QueryClientProvider,} from '@tanstack/react-query'
 import Success from './pages/success/Success';
 import Pay from './pages/pay/Pay';
+import Add from './pages/add/Add';
 
 
 
@@ -81,6 +82,10 @@ function App() {
         {
           path: "/success",
           element: <Success />,
+        },
+        {
+          path: "/add",
+          element: <Add />,
         },
       
       ]
