@@ -24,7 +24,7 @@ export const createReview = async (req, res, next) => {
         createError(403, "You have already created a review for this gig!")
       );
 
-    //TODO: check if the user purchased the gig.
+    //TODO: check if the user purchased the gig.could be done with the order model
 
     const savedReview = await newReview.save();
 
