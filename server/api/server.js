@@ -26,7 +26,7 @@ try {
   }
 };
 
-app.get("/", (req, res) => res.send("Welcome to our API"))
+app.get("/", (req, res) => res.send("Welcome to our API"));
 
 app.use(express.json());
 app.use(cookieParser());
